@@ -11,15 +11,6 @@ elif x == 1:
 else:
     print('More')
 
-###
-
-quantidade = 10  
-preço = 20 
-
-if quantidade > 0 and preço > 0:
-    print("Dados válidos")
-else:
-    print("Dados inválidos")
 
 ### FOR 
 for i in range(2,6):

@@ -6,16 +6,18 @@
 
 #quantidade = 10  
 #preço = 20 
-try:
-    quantidade = float(input("Digite um valor para a quantidade: "))
-    preço = float(input("Digite um valor para o preço: "))
 
-    if quantidade > 0 and preço > 0:
-        print("Dados válidos")
-    else:
-        print("Dados inválidos")
-except:
-    print("O valor informado não é um número")
+# try:
+#     quantidade = float(input("Digite um valor para a quantidade: "))
+#     preço = float(input("Digite um valor para o preço: "))
+
+#     if quantidade > 0 and preço > 0:
+#         print("Dados válidos")
+#     else:
+#         print("Dados inválidos")
+# except:
+#     print("O valor informado não é um número")
+
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
@@ -32,6 +34,19 @@ except:
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+try:
+    nome = input("Por favor, digite seu nome: ")
+    idade = int(input("Quantos anos você tem?: "))
+    email = input("Digite seu melhor e-mail: ")
+
+    if not (18 <= idade <= 65):
+        print("Idade fora do intervalo permitido (18 a 65 anos)")
+    elif "@" not in email or "." not in email.split("@")[-1]:
+        print("Email inválido!")
+    else:
+        print("Dados de usuário válidos")
+except ValueError:
+    print("Idade de ser um número inteiro!")
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
