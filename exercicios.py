@@ -34,19 +34,21 @@
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
-try:
-    nome = input("Por favor, digite seu nome: ")
-    idade = int(input("Quantos anos você tem?: "))
-    email = input("Digite seu melhor e-mail: ")
 
-    if not (18 <= idade <= 65):
-        print("Idade fora do intervalo permitido (18 a 65 anos)")
-    elif "@" not in email or "." not in email.split("@")[-1]:
-        print("Email inválido!")
-    else:
-        print("Dados de usuário válidos")
-except ValueError:
-    print("Idade de ser um número inteiro!")
+# try:
+#     nome = input("Por favor, digite seu nome: ")
+#     idade = int(input("Quantos anos você tem?: "))
+#     email = input("Digite seu melhor e-mail: ")
+
+#     if not (18 <= idade <= 65):
+#         print("Idade fora do intervalo permitido (18 a 65 anos)")
+#     elif "@" not in email or "." not in email.split("@")[-1]:
+#         print("Email inválido!")
+#     else:
+#         print("Dados de usuário válidos")
+# except ValueError:
+#     print("Idade de ser um número inteiro!")
+
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
@@ -56,6 +58,22 @@ except ValueError:
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+texto = "Hoje é nossa terceira aula do bootcamp, bootcamp de python"
+novo_texto = texto.replace(",","")
+palavras = texto.split()
+
+print(palavras)
+
+contagem_de_palavras = {}
+
+# Percorrer todas as palavras dentro de "palavras" e checar se ela já está no meu contagem_de_palavras
+
+for palavra in palavras:
+    if palavra in contagem_de_palavras:
+        contagem_de_palavras[palavra] = +1
+    else:
+        contagem_de_palavras[palavra] = 1
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
